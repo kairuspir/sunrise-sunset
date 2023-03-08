@@ -1,14 +1,14 @@
 import './sunrise_sunset_data.dart';
 
 class SunriseSunsetResponse {
-  final SunriseSunsetData data;
+  final SunriseSunsetData? data;
   final bool success;
   final String error;
 
   SunriseSunsetResponse({
     this.data,
-    this.success,
-    this.error,
+    required this.success,
+    required this.error,
   });
 
   factory SunriseSunsetResponse.fromJSON(Map json) {
@@ -29,7 +29,7 @@ class SunriseSunsetResponse {
     return SunriseSunsetResponse(
       data: errorMessage.isEmpty ? SunriseSunsetData.fromJSON(results) : null,
       error: errorMessage,
-      success: errorMessage?.isEmpty,
+      success: errorMessage.isEmpty,
     );
   }
 }
