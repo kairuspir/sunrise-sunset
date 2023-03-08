@@ -38,16 +38,16 @@ class SunriseSunsetData {
   final DateTime astronomicalTwilightEnd;
 
   SunriseSunsetData._({
-    this.sunrise,
-    this.sunset,
-    this.solarNoon,
-    this.dayLength,
-    this.civilTwilightBegin,
-    this.civilTwilightEnd,
-    this.nauticalTwilightBegin,
-    this.nauticalTwilightEnd,
-    this.astronomicalTwilightBegin,
-    this.astronomicalTwilightEnd,
+    required this.sunrise,
+    required this.sunset,
+    required this.solarNoon,
+    required this.dayLength,
+    required this.civilTwilightBegin,
+    required this.civilTwilightEnd,
+    required this.nauticalTwilightBegin,
+    required this.nauticalTwilightEnd,
+    required this.astronomicalTwilightBegin,
+    required this.astronomicalTwilightEnd,
   });
 
   factory SunriseSunsetData.fromJSON(Map json) {
